@@ -14,18 +14,11 @@ function Cinemas() {
           setFilteredDataSource(cinemasTempData.data.sort((a, b) => a.name.localeCompare(b.name)));
         })();
       }, []);
+
+      // console.log(filteredDataSource[1]["address\t"])
     
     return(
       <View>
-        {/* {filteredDataSource?.map(cinema => {
-          return (
-            <TouchableOpacity key={cinema.id}>
-              <View>
-                <Text>{cinema.name}</Text>
-              </View>
-            </TouchableOpacity>
-          )
-        })} */}
         <CinemaList
         cinemas={filteredDataSource}
       />

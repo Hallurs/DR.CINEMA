@@ -7,11 +7,20 @@ export default StyleSheet.create({
     justifyContent: 'center'
 
   },
+  image: {
+    width: 200,
+    height: 300,
+    margin: 10
+  },
   nameText: {
     fontSize: 25,
     textDecorationLine: 'underline',
     textDecorationStyle: 'solid',
-    flexDirection: 'column',
-    padding: 15
-  }
+  },
+  checkmark: {
+    position: 'absolute',
+    top: 15,
+    right: 15,
+    fontSize: 16,
+  },
 });

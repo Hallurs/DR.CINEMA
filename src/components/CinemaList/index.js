@@ -17,7 +17,7 @@ function CinemaList({ cinemas }) {
                 website={item.website}
                 description={item.description}
                 phone={item.phone}
-                address={item.address}
+                address={item["address\t"]}
                 city={item.city}
                 />
             )}
