@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import CinemaList from '../../components/CinemaList';
 import axios from 'axios';
 
 function Cinemas() {
@@ -28,7 +29,7 @@ function Cinemas() {
     
     return(
       <View>
-        {filteredDataSource?.map(cinema => {
+        {/* {filteredDataSource?.map(cinema => {
           return (
             <TouchableOpacity key={cinema.id}>
               <View>
@@ -36,7 +37,10 @@ function Cinemas() {
               </View>
             </TouchableOpacity>
           )
-        })}
+        })} */}
+        <CinemaList
+        cinemas={filteredDataSource}
+      />
       </View>
     )
   }
