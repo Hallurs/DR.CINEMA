@@ -3,17 +3,16 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 /* Import view components */
-import ContactsPage from '../views/ContactsPage';
-import ContactInfo from '../views/ContactInfo';
+
+import CinemaDetail from '../views/CinemaDetail';
 
 const Stack = createStackNavigator();
 
 function Routes() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="ContactsPage">
-        <Stack.Screen name="ContactsPage" component={ContactsPage} />
-        <Stack.Screen name="ContactInfo" component={ContactInfo} />
+      <Stack.Navigator initialRouteName="CinemaDetail">
+        <Stack.Screen name="CinemaDetail" component={CinemaDetail} />
       </Stack.Navigator>
     </NavigationContainer>
   );
