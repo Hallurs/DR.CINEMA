@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-  singleContactContainer: {
+  singleCinemaContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center'
