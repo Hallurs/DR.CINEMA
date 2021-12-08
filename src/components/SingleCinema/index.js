@@ -25,7 +25,7 @@ function SingleCinema({ id, name, website, description, phone, address, city }) 
                 {name}
             </Text>
             <Text style={styles.nameText}>
-              Götuheiti: {address}
+              Website: {website}
             </Text>
           </View>
         </TouchableOpacity>

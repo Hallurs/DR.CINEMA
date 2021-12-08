@@ -10,7 +10,8 @@ function MovieList({ movie, cinemaId }) {
     return (
         <TouchableOpacity
           onPress={() => navigate('MovieDetail', {
-              movie: movie
+              cinemaId: cinemaId,
+              movieName: movie.title
           })}
         >
     
