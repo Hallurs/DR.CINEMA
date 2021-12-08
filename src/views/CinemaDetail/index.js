@@ -1,15 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { View, Text } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import CinemaList from '../../components/CinemaList';
-import axios from 'axios';
+import styles from './styles';
 
-function CinemaDetail({ route }) {
+
+const CinemaDetail = ({route}) => {
+    // const { cinemaId } = route.params;
+    const { cinemaId } = 4;
+
+
+    
+    useEffect(() => {
+        (async () => {
+
+        })();
+    }, []);
+
     return(
-        <View>
-
+        <View style={styles.container}>
+            <Text>Cinema</Text>
+            {/* <ListsOfTasks 
+                lists = {tasksLists}
+                selectedTasks={selectedTasks}
+                onLongPress={name => onTaskLongPress(name)} 
+                onValueChange={id => checkboxPressed(id)}
+                /> */}
         </View>
-    );
-}
+    )
+};
 
 export default CinemaDetail;
