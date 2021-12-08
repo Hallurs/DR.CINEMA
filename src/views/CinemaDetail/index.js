@@ -12,7 +12,7 @@ function CinemaDetail({ route }) {
         cinemaId, cinemaName, cinemaPhone, cinemaWebsite, cinemaDescription, cinemaAddress, cinemaCity,
       } = route.params;
 
-    console.log("inside of cinemaDetail: ", cinemaAddress)
+    
     const [moviesData, setMovies] = useState([]);
     const [movieList, setMovieList] = useState();
 
