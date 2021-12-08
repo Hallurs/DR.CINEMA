@@ -1,6 +1,11 @@
 import { StyleSheet } from 'react-native';
+import { coolcolor, lightgrey, periwinkle } from '../../styles/colors';
 
 export default StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: periwinkle,
+  },
   singleContactContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -14,14 +19,33 @@ export default StyleSheet.create({
   },
   image: {
     borderRadius: 25,
-    width: 50,
-    height: 50,
+    width: 200,
+    height: 400,
     margin: 10,
   },
-  checkmark: {
-    position: 'absolute',
-    top: 15,
-    right: 15,
-    fontSize: 16,
+  genresContainer: {
+    flexDirection: 'row',
+  },
+  singleGenre: {
+    marginRight: 10,
+  },
+  TimeOfShowingContainer: {
+    flexWrap: 'nowrap',
+    flexDirection: 'row',
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  button: {
+    paddingTop: 10,
+    paddingBottom: 10,
+    paddingLeft: 10,
+    paddingRight: 10,
+    borderColor: 'white',
+    borderWidth: 2,
+    backgroundColor: coolcolor,
+  },
+  buttonText: {
+    color: 'white',
   },
 });
