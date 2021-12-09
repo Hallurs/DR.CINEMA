@@ -25,14 +25,6 @@ function CinemaDetail({ route }) {
         return result;
     }
 
-    console.log("NewLine-------------------")
-    console.log(cinemaName)
-    console.log(cinemaPhone)
-    console.log(cinemaWebsite)
-    console.log(cinemaDescription)
-    console.log(cinemaAddress)
-    console.log(cinemaCity)
-
     useEffect(() => {
     (async () => {
         const cinemasTempData = await loadMovies();

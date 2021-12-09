@@ -17,7 +17,7 @@ function TabRoutes() {
   return (
     <Tab.Navigator>
         <Tab.Screen name="Cinemas" component={Cinemas} />
-        <Tab.Screen name="UpComingMovies" component={UpcomingMovies} />
+        <Tab.Screen name="UpComing Movies" component={UpcomingMovies} />
       </Tab.Navigator>
   );
 }

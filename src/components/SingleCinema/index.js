@@ -6,7 +6,7 @@ import styles from './styles';
 
 function SingleCinema({ id, name, website, description, phone, address, city }) {
     const { navigate } = useNavigation();
-    console.log("inside of singleCinema: ", address)
+  
     return (
         <TouchableOpacity
           onPress={() => navigate('CinemaDetail', {
