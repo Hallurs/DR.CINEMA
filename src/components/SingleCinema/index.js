@@ -6,7 +6,7 @@ import styles from './styles';
 
 function SingleCinema({ id, name, website, description, phone, address, city }) {
     const { navigate } = useNavigation();
-    console.log("inside of singleCinema: ", address)
+  
     return (
         <TouchableOpacity
           onPress={() => navigate('CinemaDetail', {
@@ -18,13 +18,14 @@ function SingleCinema({ id, name, website, description, phone, address, city }) 
             cinemaAddress: address,
             cinemaCity: city
           })}
+          style={styles.button}
         >
     
           <View style={styles.singleCinemaContainer}>
-            <Text style={styles.nameText}>
+            <Text style={styles.CinemaName}>
                 {name}
             </Text>
-            <Text style={styles.nameText}>
+            <Text style={styles.WebsiteText}>
               Website: {website}
             </Text>
           </View>

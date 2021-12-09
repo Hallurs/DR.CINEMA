@@ -4,6 +4,7 @@ import reducers from './src/reducers';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import AppContainer from './src/routes';
+import UpcomingMovies from './src/views/UpcomingMovies';
 
 export default function App() {
   return (
