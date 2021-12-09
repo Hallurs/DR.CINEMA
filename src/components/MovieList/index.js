@@ -17,7 +17,7 @@ function MovieList({ movie, cinemaId }) {
     
           <View 
             style={styles.singleCinemaContainer}
-            key={cinemaId}>
+            key={movie.id}>
                 
                 <Image 
                 style={styles.image}
