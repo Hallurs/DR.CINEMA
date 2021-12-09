@@ -14,8 +14,6 @@ function Cinemas() {
           setFilteredDataSource(cinemasTempData.data.sort((a, b) => a.name.localeCompare(b.name)));
         })();
       }, []);
-
-      // console.log(filteredDataSource[1]["address\t"])
     
     return(
       <View>
