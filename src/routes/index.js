@@ -16,7 +16,7 @@ const Tab = createMaterialTopTabNavigator();
 function TabRoutes() {
   return (
     <Tab.Navigator>
-        <Tab.Screen name="Cinemas" component={Cinemas} />
+        <Tab.Screen name="Cinema" component={Cinemas} />
         <Tab.Screen name="UpComing Movies" component={UpcomingMovies} />
       </Tab.Navigator>
   );
@@ -35,4 +35,3 @@ function Routes() {
 }
 
 export default Routes;
-/* export default TabRoutes; */

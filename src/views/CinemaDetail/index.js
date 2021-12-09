@@ -75,10 +75,10 @@ function CinemaDetail({ route }) {
                                 /* console.log(showtime?.cinema) */
                                 showtime?.cinema?.id === cinemaId
                                 ?
-                                   <MovieList movie={TheaterAndshowTime} cinemaId={cinemaId} key={TheaterAndshowTime.id}/>
-                                    // <View key={cinemaId}>
-                                    //     <Text>{TheaterAndshowTime.title}</Text>
-                                    // </View>
+                                   <MovieList 
+                                   movie={TheaterAndshowTime} 
+                                   cinemaId={cinemaId} 
+                                   id={TheaterAndshowTime.id}/>
                                     
                                 :
                                     <View>
@@ -90,30 +90,6 @@ function CinemaDetail({ route }) {
                         )
                     )
                 ))}
-
-        {/* <View> 
-            {movieList?.map(movie => 
-                
-                [movie]?.map(theater =>
-                        
-                        [theater]?.map(TheaterAndshowTime => /* TODO add in here a check for the id of the theater
-                            {console.log(theater)},
-                            TheaterAndshowTime?.cinema?.map(cinemas =>
-                            {
-                                {console.log(cinemas)}
-                                if(cinemas.id == cinemaId){
-                                <View>
-                                    <Text>A movie</Text>
-                                <Text>{showTimes?.time}</Text>
-                                <TouchableOpacity style={styles.button} onPress={() => Linking.openURL(showTimes?.purchase_url)}>
-                                    <Text style={styles.buttonText}>Purchase ticket!</Text>
-                                </TouchableOpacity>
-                                </View>       
-                            }
-                        }
-                            )))
-                )}
-        </View> */}
         </ScrollView>
 
         
