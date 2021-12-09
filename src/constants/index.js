@@ -1,1 +1,5 @@
 export const GET_NOW_PLAYING= 'GET_NOW_PLAYING';
+export const GET_FILMS = 'GET_FILMS';
+export const GET_CINEMAS = 'GET_CINEMAS';
+export const GET_UPCOMING_FILMS = 'GET_UPCOMING_FILMS';
+export const GET_SINGLE_FILM = 'GET_SINGLE_FILM';

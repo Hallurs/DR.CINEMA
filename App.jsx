@@ -1,9 +1,9 @@
 import React from 'react';
-import AppContainer from './src/routes';
-import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
 import reducers from './src/reducers';
+import thunk from 'redux-thunk';
+import { Provider } from 'react-redux';
+import AppContainer from './src/routes';
 
 export default function App() {
   return (

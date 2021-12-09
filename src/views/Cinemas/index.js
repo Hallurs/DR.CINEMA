@@ -1,25 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import React, { useEffect } from 'react';
+import { View} from 'react-native';
 import CinemaList from '../../components/CinemaList';
-import loadCinemas from '../../services/cinemaService';
+import { useDispatch } from 'react-redux';
+import { loadCinemas } from '../../actions/cinemasActions'
+import { useSelector } from 'react-redux';
 
 function Cinemas() {
   
-    const [filteredDataSource, setFilteredDataSource] = useState([]);
-  
+    const dispatch = useDispatch();
+    
     useEffect(() => {
-        (async () => {
-          const cinemasTempData = await loadCinemas();
-          setFilteredDataSource(cinemasTempData.data.sort((a, b) => a.name.localeCompare(b.name)));
+        (() => {
+          dispatch(loadCinemas());
         })();
       }, []);
+    
+    const cinemas = useSelector(state => state.cinemas);
     
     return(
       <View>
         <CinemaList
-        cinemas={filteredDataSource}
-      />
+          cinemas={cinemas}
+        />
       </View>
     )
   }
