@@ -4,19 +4,13 @@ import { useNavigation } from '@react-navigation/native';
 import PropTypes from 'prop-types';
 import styles from './styles';
 
-function SingleCinema({ id, name, website, description, phone, address, city }) {
+function SingleCinema({ cinema, name, website }) {
     const { navigate } = useNavigation();
   
     return (
         <TouchableOpacity
           onPress={() => navigate('CinemaDetail', {
-            cinemaId: id,
-            cinemaName: name,
-            cinemaPhone: phone,
-            cinemaWebsite: website,
-            cinemaDescription: description,
-            cinemaAddress: address,
-            cinemaCity: city
+            cinema: cinema
           })}
           style={styles.button}
         >

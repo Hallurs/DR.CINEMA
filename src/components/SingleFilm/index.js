@@ -49,17 +49,17 @@ function SingleFilm({ filmData, cinemaId }) {
                     }
                     <Text>Times Of showing:</Text>
                     {film?.showtimes?.map(theater =>
-                        [theater]?.map(TheaterAndshowTime => /* TODO add in here a check for the id of the theater*/
+                        [theater]?.map(TheaterAndshowTime =>
                         TheaterAndshowTime?.cinema?.id === cinemaId
                         ?
                         TheaterAndshowTime?.schedule?.map(showTimes =>
                         {
                             return (
                                 <View style={styles.TimeOfShowingContainer} key={TheaterAndshowTime.id}>
-                                <Text>{showTimes?.time}</Text>
-                                <TouchableOpacity style={styles.button} onPress={() => Linking.openURL(showTimes?.purchase_url)}>
-                                    <Text style={styles.buttonText}>Purchase ticket!</Text>
-                                </TouchableOpacity>
+                                    <Text>{showTimes?.time}</Text>
+                                    <TouchableOpacity style={styles.button} onPress={() => Linking.openURL(showTimes?.purchase_url)}>
+                                        <Text style={styles.buttonText}>Purchase ticket!</Text>
+                                    </TouchableOpacity>
                                 </View>
                             )
                         })

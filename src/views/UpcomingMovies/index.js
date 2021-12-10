@@ -23,9 +23,10 @@ function UpcomingMovies() {
     return(
         <ScrollView>
             <View>
-                {upcomingFilms?.map(allMovies =>
+                {upcomingFilms?.map(singleMovie =>
                 <UpcomingMovieList
-                    UpComing={allMovies} />  
+                    key={singleMovie.id}
+                    UpComingMovie={singleMovie} />  
                 )}
             </View>
         </ScrollView>

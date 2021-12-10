@@ -13,11 +13,7 @@ function youtube_parser(url){
     return (match&&match[7].length==11)? match[7] : false;
 }
 
-function loadInTrailer(){
-    console.log("hehe");
-}
-
-function UpcomingMovieList({ UpComing }) {
+function UpcomingMovieList({ UpComingMovie }) {
 
     const [openedTrailer, setOpenedTrailer] = useState(false);
     const toggleTrailerOpenedOrClosed = () => {
@@ -27,26 +23,30 @@ function UpcomingMovieList({ UpComing }) {
     return(
         <View 
         style={styles.singleUpcomingMovieContainer}
-        key={UpComing.id}>
+        key={UpComingMovie.id}>
+            <Text style={styles.nameText}>
+                {UpComingMovie.title}{'\n'}
+                Release: {UpComingMovie["release-dateIS"]}
+            </Text>
             {   
                 openedTrailer
                 ?
                 (
-                    UpComing?.trailers[0]?.results[0]?.url
+                    UpComingMovie?.trailers[0]?.results[0]?.url
                     ?
                     <View>
                         <YoutubePlayer
                             height={300}
                             width={400}
                             play={true}
-                            videoId={youtube_parser(UpComing?.trailers[0]?.results[0].url)}
+                            videoId={youtube_parser(UpComingMovie?.trailers[0]?.results[0].url)}
                         />
                     </View>
                     :
                     <TouchableOpacity style={styles.singleUpcomingMovieContainer} onPress={() => toggleTrailerOpenedOrClosed()}>
                         <Image
                             style={styles.image}
-                            source={{ uri: UpComing.poster}}
+                            source={{ uri: UpComingMovie.poster}}
                         />
                     </TouchableOpacity>
                 )
@@ -56,10 +56,10 @@ function UpcomingMovieList({ UpComing }) {
                     <TouchableOpacity style={styles.singleUpcomingMovieContainer} onPress={() => toggleTrailerOpenedOrClosed()}>
                         <Image
                             style={styles.image}
-                            source={{ uri: UpComing.poster}}
+                            source={{ uri: UpComingMovie.poster}}
                         />
                         {
-                            UpComing?.trailers[0]?.results[0]?.url
+                            UpComingMovie?.trailers[0]?.results[0]?.url
                             ?
                             <AntDesign name="caretright" style={styles.checkmark} />
                             :
@@ -68,10 +68,6 @@ function UpcomingMovieList({ UpComing }) {
                     </TouchableOpacity>
                 )
             }
-            <Text style={styles.nameText}>
-                {UpComing.title}{'\n'}
-                Release: {UpComing["release-dateIS"]}
-            </Text>
         </View>
     );
 }

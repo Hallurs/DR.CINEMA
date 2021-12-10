@@ -12,13 +12,9 @@ function CinemaList({ cinemas }) {
             data={cinemas}
             renderItem={({ item }) => (
                 <SingleCinema
-                id={item.id}
-                name={item.name}
-                website={item.website}
-                description={item.description}
-                phone={item.phone}
-                address={item["address\t"]}
-                city={item.city}
+                    cinema={item}
+                    name={item.name}
+                    website={item.website}
                 />
             )}
             />

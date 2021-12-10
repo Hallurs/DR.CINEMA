@@ -15,8 +15,6 @@ export default StyleSheet.create({
   },
   nameText: {
     fontSize: 20,
-    textDecorationLine: 'underline',
-    textDecorationStyle: 'solid',
     textAlign: 'center',
   },
   icon: {
