@@ -4,7 +4,6 @@ import { coolcolor, lightgrey, periwinkle } from '../../styles/colors';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: periwinkle,
   },
   singleContactContainer: {
     flexDirection: 'row',
@@ -12,16 +11,22 @@ export default StyleSheet.create({
     justifyContent: 'center'
 
   },
+  ViewContainer: {
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: 20
+  },
   nameText: {
     fontSize: 25,
     textDecorationLine: 'underline',
     textDecorationStyle: 'solid',
   },
   image: {
-    borderRadius: 25,
     width: 200,
     height: 400,
     margin: 10,
+    alignItems: 'center'
   },
   genresContainer: {
     flexDirection: 'row',
@@ -41,7 +46,7 @@ export default StyleSheet.create({
     paddingBottom: 10,
     paddingLeft: 10,
     paddingRight: 10,
-    borderColor: 'white',
+    borderColor: 'black',
     borderWidth: 2,
     backgroundColor: coolcolor,
   },
