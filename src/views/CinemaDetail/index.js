@@ -40,32 +40,6 @@ function CinemaDetail({ route }) {
                 <Text style={styles.nameText}>
                     {cinemaName}
                 </Text>
-                <View>
-                    {
-                        cinemaDescription
-                           
-                        ? (
-                            <Text>
-                                {htmlTagRemover(cinemaDescription)}
-                            </Text>
-                        )
-                        : (
-                        <></>
-                        )
-                    }
-                </View>
-                <Text>
-                    {cinemaWebsite}
-                </Text>
-                <Text>
-                    {cinemaAddress}
-                </Text>
-                <Text>
-                    {cinemaCity}
-                </Text>
-                <Text>
-                    {cinemaPhone}
-                </Text>
             </View> 
             {movieList?.map(allallmovies => 
                 
@@ -91,6 +65,32 @@ function CinemaDetail({ route }) {
                         )
                     )
                 ))}
+            {/* <Text style={styles.descriptionTitle}>
+                Description
+            </Text> */}
+            {
+                cinemaDescription
+                    
+                ? (
+                    <View>
+                        <Text style={styles.descriptionTitle}>
+                            Description
+                        </Text>
+                        <Text style={styles.descriptionText}>
+                            {htmlTagRemover(cinemaDescription)}
+                        </Text>
+                    </View>
+                )
+                : (
+                <></>
+                )
+            }
+            <Text style={styles.descriptionTitle}>
+                Theater information
+            </Text>
+            <Text style={styles.descriptionText}>
+                {cinemaWebsite}{'\n'}{cinemaAddress}{'\n'}{cinemaCity}{'\n'}{cinemaPhone}
+            </Text>
         </ScrollView>
 
         

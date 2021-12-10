@@ -5,7 +5,6 @@ export default StyleSheet.create({
     container: {
         flex: 1,
         padding: 20,
-        backgroundColor: periwinkle,
         alignItems: 'center',
         justifyContent: 'space-around'
     },
@@ -26,5 +25,15 @@ export default StyleSheet.create({
       },
     buttonText: {
         color: 'white'
-    }
+    },
+    descriptionTitle: {
+        fontSize: 20,
+        textDecorationStyle: 'solid',
+        textAlign: 'center',
+        paddingTop: 15
+    },
+    descriptionText: {
+        fontSize: 15,
+        textAlign: 'center'
+    },
 });
