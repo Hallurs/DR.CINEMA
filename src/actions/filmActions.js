@@ -23,6 +23,17 @@ export const getSingleFilm = (filmTitle) => {
     };
 }
 
+export const getUpcomingFilms = () => {
+    return async dispatch => {
+        try {
+            const film = await filmService.getUpcomingMovies();
+            dispatch(getUpcomingFilmsSuccess(film));
+        } catch (err) {
+            // TODO: Should dispatch an error action
+        }
+    };
+}
+
 const getAllFilmsSuccess = films => ({
     type: constants.GET_FILMS,
     payload: films
@@ -31,4 +42,9 @@ const getAllFilmsSuccess = films => ({
 const getSingleFilmSuccess = film => ({
     type: constants.GET_SINGLE_FILM,
     payload: film
+});
+
+const getUpcomingFilmsSuccess = films => ({
+    type: constants.GET_UPCOMING_FILMS,
+    payload: films
 });

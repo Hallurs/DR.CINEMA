@@ -15,7 +15,6 @@ function youtube_parser(url){
 }
 
 function SingleFilm({ filmData, cinemaId }) {
-
     return (
         <ScrollView style={styles.container}> 
             {filmData.map(film => {

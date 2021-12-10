@@ -1,29 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { View, Text } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import CinemaList from '../../components/CinemaList';
 import styles from '../../components/SingleCinema/styles';
-import loadUpcomingMovies from '../../services/UpcomingMovieList';
 import UpcomingMovieList from '../../components/UpcomingMovieList';
+import { useDispatch, useSelector } from 'react-redux';
 import { ScrollView } from 'react-native-gesture-handler';
+import { getUpcomingFilms } from '../../actions/filmActions';
 
 function UpcomingMovies() {
-    const [filteredDataSource, setFilteredDataSource] = useState([]);
   
+    const dispatch = useDispatch();
+    
     useEffect(() => {
-        (async () => {
-          const filmTempData = await loadUpcomingMovies();
-          setFilteredDataSource(filmTempData.data.sort((a, b) => a["release-dateIS"].localeCompare(b["release-dateIS"])));
+        (() => {
+          dispatch(getUpcomingFilms());
         })();
       }, []);
+    
+    const upcomingFilms = useSelector(state => state.upcomingFilms);
 
     return(
         <ScrollView>
             <View>
-                {filteredDataSource?.map(allMovies =>
+                {upcomingFilms?.map(allMovies =>
                 <UpcomingMovieList
-                key={allMovies.id}
-                UpComing={allMovies} />  
+                    UpComing={allMovies} />  
                 )}
             </View>
         </ScrollView>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { View, Text } from 'react-native';
 import MovieList from '../../components/MovieList';
 import { ScrollView } from 'react-native-gesture-handler';
@@ -34,57 +34,57 @@ function CinemaDetail({ route }) {
     
     return (
         <ScrollView key={cinemaId}>
-            <View style={styles.container}>               
-                <Text style={styles.nameText}>
-                    {cinemaName}
-                </Text>
-            </View> 
-            {films?.map(allallmovies => 
-                [allallmovies]?.map(allMovies =>
-                    [allMovies]?.map(Movie =>
-                        [Movie]?.map(TheaterAndshowTime =>
-                            TheaterAndshowTime?.showtimes?.map(showtime =>
-                                /* console.log(showtime?.cinema) */
-                                showtime?.cinema?.id === cinemaId
-                                ?
-                                   <MovieList 
-                                   movie={TheaterAndshowTime} 
-                                   cinemaId={cinemaId} 
-                                   id={TheaterAndshowTime.id}/>
-                                    
-                                :
-                                    <View>
-                                    </View>
+            <View style={styles.container}>
+                <View style={styles.container}>               
+                    <Text style={styles.nameText}>
+                        {cinemaName}
+                    </Text>
+                </View> 
+                {films?.map(allallmovies => 
+                    [allallmovies]?.map(allMovies =>
+                        [allMovies]?.map(Movie =>
+                            [Movie]?.map(TheaterAndshowTime =>
+                                TheaterAndshowTime?.showtimes?.map(showtime =>
+                                    /* console.log(showtime?.cinema) */
+                                    showtime?.cinema?.id === cinemaId
+                                    ?
+                                    <MovieList 
+                                    movie={TheaterAndshowTime} 
+                                    cinemaId={cinemaId} 
+                                    id={TheaterAndshowTime.id}/>
+                                        
+                                    :
+                                        <View>
+                                        </View>
+                                )
                             )
                         )
+                    ))}
+                {
+                    cinemaDescription
+                    ? (
+                        <View>
+                            <Text style={styles.descriptionTitle}>
+                                Description
+                            </Text>
+                            <Text style={styles.descriptionText}>
+                                {htmlTagRemover(cinemaDescription)}
+                            </Text>
+                        </View>
                     )
-                ))}
-            {/* <Text style={styles.descriptionTitle}>
-                Description
-            </Text> */}
-            {
-                cinemaDescription
-                    
-                ? (
-                    <View>
-                        <Text style={styles.descriptionTitle}>
-                            Description
-                        </Text>
-                        <Text style={styles.descriptionText}>
-                            {htmlTagRemover(cinemaDescription)}
-                        </Text>
-                    </View>
-                )
-                : (
-                <></>
-                )
-            }
-            <Text style={styles.descriptionTitle}>
-                Theater information
-            </Text>
-            <Text style={styles.descriptionText}>
-                {cinemaWebsite}{'\n'}{cinemaAddress}{'\n'}{cinemaCity}{'\n'}{cinemaPhone}
-            </Text>
+                    : (
+                    <></>
+                    )
+                }
+                <View style={styles.descriptionContainer}>
+                    <Text style={styles.descriptionTitle}>
+                        Theater information
+                    </Text>
+                    <Text style={styles.descriptionText}>
+                        {cinemaWebsite}{'\n'}{cinemaAddress}{'\n'}{cinemaCity}{'\n'}{cinemaPhone}
+                    </Text>
+                </View>
+            </View>
         </ScrollView>
 
         

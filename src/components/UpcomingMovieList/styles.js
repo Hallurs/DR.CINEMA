@@ -19,4 +19,17 @@ export default StyleSheet.create({
     textDecorationStyle: 'solid',
     textAlign: 'center',
   },
+  icon: {
+    fontSize: 60,
+    marginTop: 20,
+    marginBottom: 20,
+    paddingLeft: 10,
+    paddingRight: 10,
+  },
+  checkmark: {
+    position: 'absolute',
+    alignItems: 'center',
+    color: 'white',
+    fontSize: 64
+  },
 });

@@ -2,11 +2,16 @@ import { StyleSheet } from "react-native";
 import { periwinkle, coolcolor } from "../../styles/colors";
 
 export default StyleSheet.create({
+    scrollContainer: {
+        flex: 1,
+        flexDirection: 'column',
+    },
     container: {
         flex: 1,
+        flexDirection: 'column',
         padding: 20,
         alignItems: 'center',
-        justifyContent: 'space-around'
+        justifyContent: 'space-between'
     },
     button: {
         marginTop: 30,
@@ -30,10 +35,13 @@ export default StyleSheet.create({
         fontSize: 20,
         textDecorationStyle: 'solid',
         textAlign: 'center',
-        paddingTop: 15
+        paddingTop: 15,
     },
     descriptionText: {
         fontSize: 15,
-        textAlign: 'center'
+        textAlign: 'center',
+        marginTop: 'auto'
+    },
+    descriptionContainer: {
     },
 });

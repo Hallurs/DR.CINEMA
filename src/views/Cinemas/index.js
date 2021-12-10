@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
 import { View} from 'react-native';
 import CinemaList from '../../components/CinemaList';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { loadCinemas } from '../../actions/cinemasActions'
-import { useSelector } from 'react-redux';
 
 function Cinemas() {
   
