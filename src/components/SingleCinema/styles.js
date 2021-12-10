@@ -5,14 +5,14 @@ export default StyleSheet.create({
   singleCinemaContainer: {
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   CinemaName: {
     fontSize: 25,
     textDecorationLine: 'underline',
     textDecorationStyle: 'solid',
     paddingTop: 15,
-    color: 'white'
+    color: 'white',
   },
   WebsiteText: {
     fontSize: 20,
@@ -22,11 +22,10 @@ export default StyleSheet.create({
     paddingBottom: 10,
     paddingLeft: 10,
     paddingRight: 10,
-    borderColor: 'white',
     borderWidth: 1,
     backgroundColor: coolcolor,
     borderRadius: 100,
-    borderColor: "black",
+    borderColor: 'black',
     margin: 20,
   },
 });

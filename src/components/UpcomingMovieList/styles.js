@@ -5,13 +5,13 @@ export default StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: 20
+    paddingTop: 20,
   },
   image: {
     width: 200,
     height: 300,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   nameText: {
     fontSize: 20,
@@ -28,6 +28,6 @@ export default StyleSheet.create({
     position: 'absolute',
     alignItems: 'center',
     color: 'white',
-    fontSize: 64
+    fontSize: 64,
   },
 });

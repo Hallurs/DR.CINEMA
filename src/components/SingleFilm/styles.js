@@ -1,30 +1,30 @@
 import { StyleSheet } from 'react-native';
-import { coolcolor, lightgrey, periwinkle } from '../../styles/colors';
+import { coolcolor } from '../../styles/colors';
 
 export default StyleSheet.create({
   container: {
     flex: 1,
   },
-  singleContactContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center'
-
+  contentContainer: {
+    flexGrow: 1, 
+    justifyContent: 'space-between',
+    flexDirection: 'column',
+    justifyContent: 'center',
   },
   ViewContainer: {
+    flexGrow: 1, 
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center',
-    paddingTop: 20
+    paddingTop: 20,
   },
   nameText: {
     fontSize: 25,
     textDecorationLine: 'underline',
     textDecorationStyle: 'solid',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   image: {
-    width: 200,
+    width: 300,
     height: 400,
     margin: 10,
     alignItems: 'center',
@@ -32,21 +32,20 @@ export default StyleSheet.create({
 
   },
   genresContainer: {
-    /* flexDirection: 'row', */
     fontSize: 15,
     paddingTop: 10,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   singleGenre: {
     marginRight: 10,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   TimeOfShowingContainer: {
     flexWrap: 'nowrap',
     flexDirection: 'row',
     width: '100%',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
   },
   button: {
     paddingTop: 10,
@@ -63,6 +62,6 @@ export default StyleSheet.create({
   normalText: {
     fontSize: 15,
     paddingTop: 10,
-    textAlign: 'center'
+    textAlign: 'center',
   },
 });

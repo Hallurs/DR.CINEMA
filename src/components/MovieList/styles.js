@@ -4,13 +4,13 @@ export default StyleSheet.create({
   singleCinemaContainer: {
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
 
   },
   image: {
     width: 200,
     height: 300,
-    margin: 10
+    margin: 10,
   },
   nameText: {
     fontSize: 25,

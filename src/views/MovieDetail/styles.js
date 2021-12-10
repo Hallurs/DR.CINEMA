@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { coolcolor, lightgrey, periwinkle } from '../../styles/colors';
+import { coolcolor, periwinkle } from '../../styles/colors';
 
 export default StyleSheet.create({
   container: {
@@ -9,7 +9,7 @@ export default StyleSheet.create({
   singleContactContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
 
   },
   nameText: {

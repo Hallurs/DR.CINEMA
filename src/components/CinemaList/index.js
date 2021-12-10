@@ -1,9 +1,6 @@
 import React from 'react';
 import { View, FlatList } from 'react-native';
-import PropTypes from 'prop-types';
-import styles from './styles';
 import SingleCinema from '../SingleCinema';
-
 
 function CinemaList({ cinemas }) {
     return (
@@ -12,14 +9,15 @@ function CinemaList({ cinemas }) {
             data={cinemas}
             renderItem={({ item }) => (
                 <SingleCinema
+                    key={item.id}
                     cinema={item}
                     name={item.name}
                     website={item.website}
-                />
+                    />
             )}
             />
         </View>
     );
 };
 
-export default CinemaList
+export default CinemaList;
