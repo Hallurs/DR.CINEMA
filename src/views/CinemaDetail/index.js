@@ -5,6 +5,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 import { useDispatch } from 'react-redux';
 import { getAllFilms } from '../../actions/filmActions'
 import { useSelector } from 'react-redux';
+import styles from './styles';
 
 function CinemaDetail({ route }) {
 
@@ -33,35 +34,9 @@ function CinemaDetail({ route }) {
     
     return (
         <ScrollView key={cinemaId}>
-            <View>               
-                <Text>
+            <View style={styles.container}>               
+                <Text style={styles.nameText}>
                     {cinemaName}
-                </Text>
-                <View>
-                    {
-                        cinemaDescription
-                           
-                        ? (
-                            <Text>
-                                {htmlTagRemover(cinemaDescription)}
-                            </Text>
-                        )
-                        : (
-                        <></>
-                        )
-                    }
-                </View>
-                <Text>
-                    {cinemaWebsite}
-                </Text>
-                <Text>
-                    {cinemaAddress}
-                </Text>
-                <Text>
-                    {cinemaCity}
-                </Text>
-                <Text>
-                    {cinemaPhone}
                 </Text>
             </View> 
             {films?.map(allallmovies => 
@@ -84,6 +59,32 @@ function CinemaDetail({ route }) {
                         )
                     )
                 ))}
+            {/* <Text style={styles.descriptionTitle}>
+                Description
+            </Text> */}
+            {
+                cinemaDescription
+                    
+                ? (
+                    <View>
+                        <Text style={styles.descriptionTitle}>
+                            Description
+                        </Text>
+                        <Text style={styles.descriptionText}>
+                            {htmlTagRemover(cinemaDescription)}
+                        </Text>
+                    </View>
+                )
+                : (
+                <></>
+                )
+            }
+            <Text style={styles.descriptionTitle}>
+                Theater information
+            </Text>
+            <Text style={styles.descriptionText}>
+                {cinemaWebsite}{'\n'}{cinemaAddress}{'\n'}{cinemaCity}{'\n'}{cinemaPhone}
+            </Text>
         </ScrollView>
 
         

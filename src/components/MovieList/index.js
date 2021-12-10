@@ -26,7 +26,7 @@ function MovieList({ movie, cinemaId }) {
                 <Text style={styles.nameText}>
                     {movie.title}
                 </Text>
-                <Text style={styles.nameText}>
+                <Text>
                     {movie.year}
                 </Text>
                 {movie?.genres?.map(genre => <Text key={genre.ID}>{genre.Name}</Text>)}
