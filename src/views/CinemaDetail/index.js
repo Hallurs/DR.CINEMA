@@ -1,20 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import axios from 'axios';
-import loadMovies from '../../services/listOfMovieService';
 import MovieList from '../../components/MovieList';
 import { ScrollView } from 'react-native-gesture-handler';
+import { useDispatch } from 'react-redux';
+import { getAllFilms } from '../../actions/filmActions'
+import { useSelector } from 'react-redux';
 
 function CinemaDetail({ route }) {
 
     const {
         cinemaId, cinemaName, cinemaPhone, cinemaWebsite, cinemaDescription, cinemaAddress, cinemaCity,
       } = route.params;
-
-    
-    const [moviesData, setMovies] = useState([]);
-    const [movieList, setMovieList] = useState();
 
     const htmlTagRemover = (description) => {
         // this was taken from stack overflow
@@ -25,13 +21,15 @@ function CinemaDetail({ route }) {
         return result;
     }
 
+    const dispatch = useDispatch();
+
     useEffect(() => {
-    (async () => {
-        const cinemasTempData = await loadMovies();
-        setMovieList(cinemasTempData.data);
-        
-    })();
-    }, []);
+        (() => {
+          dispatch(getAllFilms());
+        })();
+      }, []);
+    
+    const films = useSelector(state => state.films);
     
     return (
         <ScrollView key={cinemaId}>
@@ -66,8 +64,7 @@ function CinemaDetail({ route }) {
                     {cinemaPhone}
                 </Text>
             </View> 
-            {movieList?.map(allallmovies => 
-                
+            {films?.map(allallmovies => 
                 [allallmovies]?.map(allMovies =>
                     [allMovies]?.map(Movie =>
                         [Movie]?.map(TheaterAndshowTime =>
@@ -82,10 +79,7 @@ function CinemaDetail({ route }) {
                                     
                                 :
                                     <View>
-
                                     </View>
-                                
-                            
                             )
                         )
                     )
