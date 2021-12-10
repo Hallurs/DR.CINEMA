@@ -15,11 +15,11 @@ function UpcomingMovieList({ UpComing }) {
                     style={styles.image}
                     source={{ uri: UpComing.poster}}
                 />
-                <Text style={styles.nameText}>
+            </TouchableOpacity>
+            <Text style={styles.nameText}>
                     {UpComing.title}{'\n'}
                     Release: {UpComing["release-dateIS"]}
-                </Text>
-            </TouchableOpacity>
+            </Text>
         </View>
     );
 }
