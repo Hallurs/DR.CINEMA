@@ -14,7 +14,7 @@ function youtube_parser(url){
     return (match&&match[7].length==11)? match[7] : false;
 }
 
-function SingleFilm({ filmData, cinemaId}) {
+function SingleFilm({ filmData, cinemaId }) {
 
     return (
         <ScrollView style={styles.container}> 

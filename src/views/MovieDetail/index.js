@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View } from 'react-native';
 import { useDispatch } from 'react-redux';
-import { getSingleFilm } from '../../actions/singleFilmActions'
+import { getSingleFilm } from '../../actions/filmActions'
 import { useSelector } from 'react-redux';
 import SingleFilm from '../../components/SingleFilm';
 
