@@ -5,6 +5,7 @@ import axios from 'axios';
 import loadMovies from '../../services/listOfMovieService';
 import MovieList from '../../components/MovieList';
 import { ScrollView } from 'react-native-gesture-handler';
+import styles from './styles';
 
 function CinemaDetail({ route }) {
 
@@ -35,8 +36,8 @@ function CinemaDetail({ route }) {
     
     return (
         <ScrollView key={cinemaId}>
-            <View>               
-                <Text>
+            <View style={styles.container}>               
+                <Text style={styles.nameText}>
                     {cinemaName}
                 </Text>
                 <View>

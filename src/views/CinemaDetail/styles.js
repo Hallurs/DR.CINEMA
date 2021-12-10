@@ -19,6 +19,11 @@ export default StyleSheet.create({
         borderWidth: 2,
         backgroundColor: coolcolor
     },
+    nameText: {
+        fontSize: 25,
+        textDecorationLine: 'underline',
+        textDecorationStyle: 'solid',
+      },
     buttonText: {
         color: 'white'
     }
