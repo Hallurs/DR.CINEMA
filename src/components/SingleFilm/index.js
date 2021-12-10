@@ -20,14 +20,18 @@ function SingleFilm({ filmData, cinemaId }) {
             {filmData.map(film => {
                 return (
                     <View key={film.id}>
-                    <Text>Film title: {film.title}</Text>
+                    <Text style={styles.nameText}>
+                        {film.title}
+                    </Text>
                     <Image
                         style={styles.image}
                         resizeMode="cover"
                         source={{ uri: film.poster }}
                     />
-                    <Text>Run time in minutes: {film.durationMinutes}</Text>
-                    <Text>Release year: {film.year}</Text>
+                    <Text style={styles.normalText}>
+                        Run time in minutes: {film.durationMinutes}{'\n'}
+                        Release year: {film.year}
+                    </Text>
                     <View style={styles.genresContainer}>
                         <Text> GENRES: </Text>
                         {film?.genres?.map(genre => <Text key={genre.ID} style={styles.singleGenre}>{genre.Name}</Text>)}

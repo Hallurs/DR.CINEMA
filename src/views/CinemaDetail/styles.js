@@ -42,6 +42,9 @@ export default StyleSheet.create({
         textAlign: 'center',
         marginTop: 'auto'
     },
-    descriptionContainer: {
+    InformationText: {
+        fontSize: 15,
+        textAlign: 'center',
+        marginTop: 'auto',
     },
 });

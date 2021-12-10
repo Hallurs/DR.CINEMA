@@ -80,7 +80,7 @@ function CinemaDetail({ route }) {
                     <Text style={styles.descriptionTitle}>
                         Theater information
                     </Text>
-                    <Text style={styles.descriptionText}>
+                    <Text style={styles.InformationText}>
                         {cinemaWebsite}{'\n'}{cinemaAddress}{'\n'}{cinemaCity}{'\n'}{cinemaPhone}
                     </Text>
                 </View>

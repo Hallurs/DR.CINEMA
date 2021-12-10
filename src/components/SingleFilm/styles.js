@@ -21,18 +21,25 @@ export default StyleSheet.create({
     fontSize: 25,
     textDecorationLine: 'underline',
     textDecorationStyle: 'solid',
+    textAlign: 'center'
   },
   image: {
     width: 200,
     height: 400,
     margin: 10,
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'center',
+
   },
   genresContainer: {
-    flexDirection: 'row',
+    /* flexDirection: 'row', */
+    fontSize: 15,
+    paddingTop: 10,
+    textAlign: 'center'
   },
   singleGenre: {
     marginRight: 10,
+    textAlign: 'center'
   },
   TimeOfShowingContainer: {
     flexWrap: 'nowrap',
@@ -52,5 +59,10 @@ export default StyleSheet.create({
   },
   buttonText: {
     color: 'white',
+  },
+  normalText: {
+    fontSize: 15,
+    paddingTop: 10,
+    textAlign: 'center'
   },
 });
